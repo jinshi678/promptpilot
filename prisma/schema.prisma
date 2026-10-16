@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 一次提示词优化任务
+// MVP 阶段使用匿名用户 ID（浏览器生成、localStorage 持久化）做数据隔离，正式身份验证后续接入
+model PromptSession {
+  id                String          @id @default(cuid())
+  anonUserId        String // 匿名用户标识，用于数据归属检查
+  title             String
+  originalInput     String
+  taskType          String
+  optimizationLevel String
+  outputFormat      String
+  isMock            Boolean         @default(false)
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  versions          PromptVersion[]
+
+  @@index([anonUserId, createdAt])
+}
+
+// 提示词版本（同一会话可多次优化产生多个版本）
+model PromptVersion {
+  id            String        @id @default(cuid())
+  sessionId     String
+  prompt        String
+  qualityScore  Int
+  revisionNotes String? // JSON 序列化的修改说明数组
+  versionNumber Int
+  createdAt     DateTime      @default(now())
+  session       PromptSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId, versionNumber])
+}

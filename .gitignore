@@ -32,6 +32,15 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# prisma sqlite 本地数据库（含用户数据，禁止入库）
+*.db
+*.db-journal
+
+# IDE 本地配置与测试截图输出
+.trae/
+mobile-shots/
 
 # vercel
 .vercel

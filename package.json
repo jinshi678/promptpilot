@@ -1,12 +1,20 @@
 {
-  "name": "default",
+  "name": "promptpilot",
   "version": "0.1.0",
   "private": true,
+  "description": "把模糊想法变成高质量、可执行的提示词：需求分析、场景化生成、六维质检与自动修复、版本对比、云端收藏",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinshi678/promptpilot.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -14,13 +22,21 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
+    "@prisma/client": "^6.19.3",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.1.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
+    "jsdom": "^29.1.1",
+    "pathe": "^2.0.3",
+    "playwright-core": "^1.64.1",
+    "prisma": "^6.19.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
   }
 }
