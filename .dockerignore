@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.gitignore
+
+# 环境变量与密钥：一律不进入镜像，运行时由 docker compose 注入
+.env
+.env.*
+prisma/dev.db
+
+# 测试与本地产物
+coverage
+scripts
+*.log
+.playwright
