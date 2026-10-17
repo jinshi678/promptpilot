@@ -1,4 +1,4 @@
-﻿﻿$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 $base = "http://localhost:3000/api/sessions"
 $hdr = @{ "Content-Type" = "application/json" }
 $results = @()
