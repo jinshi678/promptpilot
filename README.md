@@ -1,10 +1,10 @@
 # PromptPilot
 
+[![CI](https://github.com/jinshi678/promptpilot/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-blue)](https://react.dev)
 [![Prisma](https://img.shields.io/badge/Prisma-6-2D3748)](https://www.prisma.io)
-[![Tests](https://img.shields.io/badge/tests-35%20passing-brightgreen)]()
 
 把模糊想法变成高质量、可执行的提示词。
 
