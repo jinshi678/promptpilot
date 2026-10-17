@@ -18,7 +18,7 @@ export interface PromptStrategy {
 
 // 通用提示词段落
 export function buildCommonSections(ctx: StrategyContext): string[] {
-  const { analysis, originalInput, optimizationLevel, outputFormat } = ctx;
+  const { analysis, originalInput, optimizationLevel } = ctx;
   const sections: string[] = [];
 
   sections.push(`# 任务目标\n${analysis.goal}`);

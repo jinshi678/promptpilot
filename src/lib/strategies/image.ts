@@ -10,7 +10,7 @@ import {
 export const imageStrategy: PromptStrategy = {
   name: "图像生成",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     const constraints = [
       "画面主体描述清晰具体",
       "明确图像风格（写实/插画/卡通等）",

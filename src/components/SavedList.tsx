@@ -22,7 +22,7 @@ export default function SavedList({ prompts, onDelete, onEditTitle, onLoad }: Sa
   if (prompts.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-zinc-200 p-8 text-center text-sm text-zinc-400 dark:border-zinc-700">
-        还没有收藏的提示词。生成后点击"保存收藏"即可保存。
+        还没有收藏的提示词。生成后点击“保存收藏”即可保存。
       </div>
     );
   }

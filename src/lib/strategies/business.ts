@@ -10,7 +10,7 @@ import {
 export const businessStrategy: PromptStrategy = {
   name: "商业与营销",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     const constraints = [
       "明确目标用户画像",
       "设定可衡量的商业目标",

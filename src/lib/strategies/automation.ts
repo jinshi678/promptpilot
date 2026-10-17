@@ -10,7 +10,7 @@ import {
 export const automationStrategy: PromptStrategy = {
   name: "自动化与智能体",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     const constraints = [
       "明确可用工具、输入输出和执行顺序",
       "定义执行权限边界",

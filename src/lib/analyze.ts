@@ -120,7 +120,7 @@ export function analyzeRequirement(
 
   const analysis: RequirementAnalysis = {
     goal: trimmed.slice(0, 150) + (trimmed.length > 150 ? "..." : ""),
-    context: buildContext(taskType, trimmed),
+    context: buildContext(taskType),
     taskType,
     inputMaterials: trimmed.length > 50 ? [`用户原始描述（${trimmed.length} 字）`] : [],
     constraints,
@@ -134,7 +134,7 @@ export function analyzeRequirement(
   return analysis;
 }
 
-function buildContext(taskType: TaskType, input: string): string {
+function buildContext(taskType: TaskType): string {
   const base: Record<TaskType, string> = {
     auto: "用户希望完成一项通用任务。",
     coding: "用户希望完成编程开发相关任务。",

@@ -10,7 +10,7 @@ import {
 export const learningStrategy: PromptStrategy = {
   name: "学习辅导",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     const constraints = [
       "识别学习者的现有基础并匹配难度",
       "将学习内容分解为递进步骤",

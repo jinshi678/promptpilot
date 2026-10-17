@@ -10,7 +10,7 @@ import {
 export const analysisStrategy: PromptStrategy = {
   name: "分析决策",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     const constraints = [
       "明确区分事实、假设和推测",
       "提供至少 2 个备选方案并比较",

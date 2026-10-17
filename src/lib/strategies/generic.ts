@@ -10,7 +10,7 @@ import {
 export const genericStrategy: PromptStrategy = {
   name: "通用",
 
-  getSpecificConstraints(ctx: StrategyContext): string[] {
+  getSpecificConstraints(): string[] {
     return ["保留用户原始需求中的关键事实和偏好"];
   },
 
